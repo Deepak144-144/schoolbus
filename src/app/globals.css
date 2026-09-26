@@ -1,52 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  --color-cream: #F8F1E3;
-  --color-card: #FFFDF7;
-  --color-primary: #3B3028;
-  --color-secondary: #6B5B4C;
-  --color-accent: #6B8E6E;
-  --color-warning: #D99A3D;
-  --color-emergency: #C85C5C;
-  --color-border: #E8DCC9;
-  --color-soft-shadow: rgba(59, 48, 40, 0.06);
-  --color-strong-shadow: rgba(59, 48, 40, 0.12);
+  --app-cream: #F8F1E3;
+  --app-card: #FFFDF7;
+  --app-primary: #3B3028;
+  --app-secondary: #6B5B4C;
+  --app-accent: #6B8E6E;
+  --app-warning: #D99A3D;
+  --app-emergency: #C85C5C;
+  --app-border: #E8DCC9;
+  --app-soft-shadow: rgba(59, 48, 40, 0.06);
+  --app-strong-shadow: rgba(59, 48, 40, 0.12);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @theme inline {
-  --color-background: var(--color-cream);
-  --color-foreground: var(--color-primary);
-  --color-secondary: var(--color-secondary);
-  --color-accent: var(--color-accent);
-  --color-warning: var(--color-warning);
-  --color-emergency: var(--color-emergency);
-  --color-border: var(--color-border);
-  --color-card: var(--color-card);
+  --color-background: var(--app-cream);
+  --color-foreground: var(--app-primary);
+  --color-secondary: var(--app-secondary);
+  --color-accent: var(--app-accent);
+  --color-warning: var(--app-warning);
+  --color-emergency: var(--app-emergency);
+  --color-border: var(--app-border);
+  --color-card: var(--app-card);
+
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
 
-  --shadow-sm: 0 1px 2px 0 var(--color-soft-shadow);
-  --shadow: 0 1px 3px 0 var(--color-soft-shadow), 0 1px 6px 0 var(--color-soft-shadow);
-  --shadow-md: 0 4px 6px -1px var(--color-soft-shadow), 0 2px 4px -1px var(--color-soft-shadow);
-  --shadow-lg: 0 10px 15px -3px var(--color-soft-shadow), 0 4px 6px -2px var(--color-soft-shadow);
-  --shadow-xl: 0 20px 25px -5px var(--color-soft-shadow), 0 10px 10px -5px var(--color-soft-shadow);
-  --shadow-2xl: 0 25px 50px -12px var(--color-soft-shadow);
+  --shadow-sm: 0 1px 2px 0 var(--app-soft-shadow);
+  --shadow: 0 1px 3px 0 var(--app-soft-shadow),
+    0 1px 6px 0 var(--app-soft-shadow);
+  --shadow-md: 0 4px 6px -1px var(--app-soft-shadow),
+    0 2px 4px -1px var(--app-soft-shadow);
+  --shadow-lg: 0 10px 15px -3px var(--app-soft-shadow),
+    0 4px 6px -2px var(--app-soft-shadow);
+  --shadow-xl: 0 20px 25px -5px var(--app-soft-shadow),
+    0 10px 10px -5px var(--app-soft-shadow);
+  --shadow-2xl: 0 25px 50px -12px var(--app-soft-shadow);
 }
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--app-border);
   }
 
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--app-cream);
+    color: var(--app-primary);
     font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   }
-}
 
-@layer base {
   html {
     scroll-behavior: smooth;
   }
@@ -97,7 +102,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-accent);
+  background: var(--app-accent);
   border-radius: 12px;
 }
 
@@ -107,8 +112,13 @@
 
 /* Animations */
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 .float {
@@ -116,8 +126,13 @@
 }
 
 @keyframes pulse-slow {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .pulse-slow {
@@ -125,8 +140,13 @@
 }
 
 @keyframes spin-slow {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .spin-slow {
