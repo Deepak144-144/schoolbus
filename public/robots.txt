@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /parent/
+Disallow: /driver/
+Disallow: /api/
+Disallow: /_next/
+
+Sitemap: https://saferide.edu/sitemap.xml

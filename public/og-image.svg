@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#F8F1E3"/>
+  <rect x="100" y="100" width="1000" height="430" rx="40" fill="#FFFDF7" stroke="#6B8E6E" stroke-width="4"/>
+  <circle cx="600" cy="315" r="80" fill="#6B8E6E"/>
+  <text x="600" y="440" font-family="system-ui, sans-serif" font-size="48" font-weight="bold" fill="#3B3028" text-anchor="middle" font-style="normal">
+    SafeRide School
+  </text>
+  <text x="600" y="490" font-family="system-ui, sans-serif" font-size="24" fill="#75685C" text-anchor="middle" font-style="normal">
+    Safe Journeys. Connected Families.
+  </text>
+</svg>
